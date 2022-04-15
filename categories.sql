@@ -1,0 +1,30 @@
+CREATE TABLE category(
+   id            VARCHAR(36) NOT NULL PRIMARY KEY
+  ,description_en VARCHAR(999)
+  ,description_pl VARCHAR(999)
+  ,image          VARCHAR(60)
+  ,_key            VARCHAR(60) 
+  ,name_en        VARCHAR(60) 
+  ,name_pl        VARCHAR(60) 
+  ,type           VARCHAR(60)
+);
+INSERT INTO category(id,description_en,description_pl,image,_key,name_en,name_pl,type) VALUES ('6221ee8b4184beb5283be422',NULL,NULL,'kitchen.jpg','kitchen','Kitchen','Kuchnia','category');
+INSERT INTO category(id,description_en,description_pl,image,_key,name_en,name_pl,type) VALUES ('6221ee8b4184beb5283be423',NULL,NULL,'stairs.jpg','stairs','Stairs','Schody','category');
+INSERT INTO category(id,description_en,description_pl,image,_key,name_en,name_pl,type) VALUES ('6221ee8b4184beb5283be424',NULL,NULL,'office.jpg','office','Office','Biuro','category');
+INSERT INTO category(id,description_en,description_pl,image,_key,name_en,name_pl,type) VALUES ('6221ee8b4184beb5283be425',NULL,NULL,'interior.jpg','interior','Interior design','Zabudowa wnętrz','category');
+INSERT INTO category(id,description_en,description_pl,image,_key,name_en,name_pl,type) VALUES ('6221ee8b4184beb5283be426',NULL,NULL,'wardrobes.jpg','wardrobes','Wardrobes','Szafy','category');
+INSERT INTO category(id,description_en,description_pl,image,_key,name_en,name_pl,type) VALUES ('62227c95827bd0137a79d946','We create custom-made furniture according to specific needs for individual clients, companies and institutions. Our goal is comfort, functionality and practicality.','Tworzymy meble na zamówienie według określonych potrzeb dla klientów indywidualnych, firm i instytucji. Liczy się dla nas wygoda, funkcjonalność, praktyczność.',NULL,'main_art_description','Furniture for you','Meble dla Ciebie','main_articule');
+INSERT INTO category(id,description_en,description_pl,image,_key,name_en,name_pl,type) VALUES ('6223e86ead93061017bf7c1e',NULL,NULL,NULL,'menu-logo-name','Custom Furniture','Meble na wymiar','menu-logo-name');
+INSERT INTO category(id,description_en,description_pl,image,_key,name_en,name_pl,type) VALUES ('6223f605ad93061017bf7c1f',NULL,NULL,NULL,'menu-main-page','Main page','Strona główna','menu-main-page');
+INSERT INTO category(id,description_en,description_pl,image,_key,name_en,name_pl,type) VALUES ('62240640ad93061017bf7c20',NULL,NULL,NULL,'menu-main-about','About us','O nas','menu-main-about');
+INSERT INTO category(id,description_en,description_pl,image,_key,name_en,name_pl,type) VALUES ('622407c1ad93061017bf7c21',NULL,NULL,NULL,'menu-main-contact','Contact','Kontakt','menu-main-contact');
+INSERT INTO category(id,description_en,description_pl,image,_key,name_en,name_pl,type) VALUES ('6224c2526291854a35a7b7ff',NULL,NULL,NULL,'main-articule-last','Show last work','Pokaż ostatnia prace','main-articule-last');
+INSERT INTO category(id,description_en,description_pl,image,_key,name_en,name_pl,type) VALUES ('6224ca5b6291854a35a7b800',NULL,NULL,NULL,'main-articule-random','Show random work','Pokaż losową prace','main-articule-random');
+INSERT INTO category(id,description_en,description_pl,image,_key,name_en,name_pl,type) VALUES ('62266a3cad1eeb3944969a67',NULL,NULL,'kitchen.jpg','all','Show All','Pokaż wszystkie','category');
+INSERT INTO category(id,description_en,description_pl,image,_key,name_en,name_pl,type) VALUES ('622e07d3c0ac9249994be1cb','Customized furniture is run by company: Zakład Stolarki - Usługi Ogólno-Budowlane. The company was founded in 1988 to create furniture with passion and love. A lot has changed over these several years. Currently, we focus on functional and simple projects that will not overwhelm our apartments, offices or institutions, but will also be a kind of decoration. The range of our services is wide. From design to assembly, we create stairs, doors, built-in recesses and kitchen furniture.
+Youre satisfaction is importent for us, therefore we provide high quality services at reasonable prices, professional advice, own transport and friendly service. In our furniture, we offer both modern technical solutions as well as traditional, proven and used for many years. Because we focus on satisfaction, our client decides about the colors, design and materials used.','Meble na wymiar prowadzony jest przez Zakład Stolarski - Usługi Ogólno-Budowlane. Firma powstałą w 1988 roku by zamiłowaniem i pasją tworzyć meble. Przez te kilkanaście lat wiele się zmieniło. Obecnie stawiamy na funkcjonalne i proste projekty, które nie przytłoczą naszych mieszkań, biur czy instytucji ale będą też swoistą dekoracją. Wachlarz naszych usług jest szeroki. Od projektu do montażu tworzymy schody, drzwi, zabudowy wnęk oraz meble kuchenne.
+Liczy się dla nas zadowolenie dlatego zapewniamy wysoką jakość usług w rozsądnych cenach, profesjonalne doradztwo, własny transport i miłą obsługę. W naszych meblach proponujemy zarówno nowoczesne rozwiązania techniczne jak i te tradycyjne, sprawdzone i stosowane od wielu lat. Ponieważ stawiamy na zadowolenie to nasz klient decyduje o kolorystyce, wzornictwie i stosowanych materiałach.',NULL,'information-about-us','About us','Informacje o nas','information-about-us');
+INSERT INTO category(id,description_en,description_pl,image,_key,name_en,name_pl,type) VALUES ('622e1073b141580a1a06d918','biuro@meblenawymiar.us','biuro@meblenawymiar.us',NULL,'contact-us','Contact us','Skontaktuj się z nami','contact-us');
+INSERT INTO category(id,description_en,description_pl,image,_key,name_en,name_pl,type) VALUES ('622e173774a396c41a0fd6ef','biuro@meblenawymiar.us','biuro@meblenawymiar.us',NULL,'contact-us-phone','Phone: 600-981-563','Telefon: 600-981-563','contact-us-phone');
+INSERT INTO category(id,description_en,description_pl,image,_key,name_en,name_pl,type) VALUES ('622e7ce4fe9e35f543f1c35a',NULL,NULL,NULL,'address','Address','Adres','address');
+INSERT INTO category(id,description_en,description_pl,image,_key,name_en,name_pl,type) VALUES ('622e7cfbfe9e35f543f1c35c','87-400 Golub-Dobrzyń','87-400 Golub-Dobrzyń',NULL,'address-street','Mostowa 1','Ul. Mostowa 1','address-street');
