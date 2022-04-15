@@ -2,10 +2,8 @@ const { pool } = require('../utils/db');
 const fs = require('fs');
 
 let language = 'pl';
-// console.log(language);
 
 exports.homepage = async (req, res) => {
-  // res.render('index');
 
   try {
     pool.getConnection((err, conn) => {
@@ -15,11 +13,10 @@ exports.homepage = async (req, res) => {
         );
       console.log(`Connection has been established - ID : ${conn.threadId}`);
 
-      conn.query( 'SELECT * FROM `category` UNION SELECT * FROM `photos`', async (err, rows) => {
+      conn.query( 'SELECT * FROM `category` UNION SELECT * FROM `photos`', async (err, data) => {
         conn.release();
-        // await console.log(rows);
         try {
-          const recordsEn = await rows.map(function (el) {
+          const recordsEn = await data.map(function (el) {
             return {
               _key: el._key,
               type: el.type,
@@ -30,7 +27,7 @@ exports.homepage = async (req, res) => {
           });
 
           const recordsPl = await (
-            await rows.map(function (el) {
+            await data.map(function (el) {
             return {
               _key: el._key,
               type: el.type,
@@ -57,8 +54,17 @@ exports.homepage = async (req, res) => {
           const address = dbRecords.filter((e) => e.type === 'address');
           const addressStreet = dbRecords.filter((e) => e.type === 'address-street');
 
+//           let efg = []
+//         const pic = () => {conn.query('SELECT * FROM `photos`', async (err, pictures) => {
+//             conn.release();
+//                 return efg = pictures
+//           })}
+// pic()
+//           console.log(efg);
+
+
           const photosEn = await (
-            await rows.map(function (el) {
+            await data.map(function (el) {
             return {
               id: el.id,
               type: el.type,
@@ -69,7 +75,7 @@ exports.homepage = async (req, res) => {
             };
           }))
           const photosPl = await (
-            await rows.map(function (el) {
+            await data.map(function (el) {
             return {
               id: el.id,
               type: el.type,
@@ -125,26 +131,3 @@ exports.homepage_en = async (req, res) => {
   language = 'en';
   res.redirect('/');
 };
-
-// insert data
-
-// async function insertCategoryData() {
-//   try {
-//     await Photos.insertMany([
-//       {
-//         type: 'interior',
-//         key: 'interior',
-//         name_en: 'Interior design',
-//         name_pl: 'Zabudowa wnętrz',
-//         description_en: 'Wooden internal structures, walls and doors',
-//         description_pl: 'Drewniane konstrukcje wewnętrzne, ściany i drzwi',
-//         image: 'uploads/photos/interior/2.jpg',
-//         thumb: 'uploads/photos/interior/2t.jpg',
-//       },
-//     ]);
-//   } catch (error) {
-//     console.log('err', error);
-//   }
-// }
-
-// insertCategoryData();

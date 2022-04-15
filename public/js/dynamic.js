@@ -9,7 +9,7 @@ const fetchData = async () => {
        document.getElementById('all').addEventListener('click', function () {
         lightGallery(document.getElementById('all'), {
           dynamic: true,
-          dynamicEl: data
+          dynamicEl: data.filter((e) => e._key === 'image')
         });
       })
        document.getElementById('kitchen').addEventListener('click', function () {
