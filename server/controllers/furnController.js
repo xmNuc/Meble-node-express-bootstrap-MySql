@@ -15,13 +15,13 @@ exports.homepage = async (req, res) => {
         );
       console.log(`Connection has been established - ID : ${conn.threadId}`);
 
-      conn.query('SELECT * FROM `category`', async (err, rows) => {
+      conn.query( 'SELECT * FROM `category` UNION SELECT * FROM `photos`', async (err, rows) => {
         conn.release();
         // await console.log(rows);
         try {
           const recordsEn = await rows.map(function (el) {
             return {
-              key: el.key,
+              _key: el._key,
               type: el.type,
               name: el.name_en,
               image: el.image,
@@ -32,7 +32,7 @@ exports.homepage = async (req, res) => {
           const recordsPl = await (
             await rows.map(function (el) {
             return {
-              key: el.key,
+              _key: el._key,
               type: el.type,
               name: el.name_pl,
               image: el.image,
